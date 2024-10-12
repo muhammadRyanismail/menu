@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AMBA DINER</title> 
+        <style>
+            body {
+                background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBqxBMYVJ91velIHPZhHm-wwxQ5p849KwAKw&s');
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: 100% 100%;
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+
+            h1, h2, h4 {
+                text-align: center;
+            }
+
+            img {
+                display: block;
+                margin: 0 auto;
+                max-width: 100%;
+                height: auto;
+            }
+
+            ul {
+                list-style-type: none;
+                padding-left: 0;
+            }
+
+            ul li {
+                text-align: center;
+                font-size: 1.2em;
+            }
+
+            form {
+                width: 90%;
+                max-width: 500px;
+                margin: 0 auto;
+                padding: 20px;
+                background-color: rgba(255, 255, 255, 0.8);
+                border-radius: 10px;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .elem-group {
+                margin-bottom: 20px;
+            }
+
+            .elem-group label {
+                display: block;
+                margin-bottom: 10px;
+                font-weight: bold;
+            }
+
+            .elem-group input, .elem-group select, .elem-group textarea {
+                width: 100%;
+                padding: 10px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+                box-sizing: border-box;
+            }
+
+            .elem-group.inlined {
+                display: inline-block;
+                width: 48%;
+                margin-right: 4%;
+            }
+
+            .elem-group.inlined:last-child {
+                margin-right: 0;
+            }
+
+            button {
+                width: 100%;
+                padding: 15px;
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                font-size: 1.2em;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background-color: #45a049;
+            }
+
+            @media (max-width: 768px) {
+                .elem-group.inlined {
+                    width: 100%;
+                    margin-right: 0;
+                }
+            }
+        </style>
+    </head> 
+    <body>
+        <h1>AMBA DINER</h1>
+        
+        <img src="https://patch.com/img/cdn20/users/22944156/20211007/112742/styles/patch_image/public/amba1___07232448144.jpg" alt="Amba Diner Image">
+        
+        <h4>Jl. Skibidi Sigma No69, Phone Number: 086942069</h4>
+        
+        <p>The <i>AMBA DINER</i> is owned by Mr. DREAMYBULL. This diner specializes in the most AMBATUKAM cuisine and does not serve any skibidi meals.</p>
+        
+        <ul>
+            <li>The Kumlaude Soup</li>
+            <li>The Ambatu Kambing Steak</li>
+            <li>The Ambatu Basreng Spicy</li>
+            <li>I Need More Salads</li>
+        </ul>
+        
+        <a href="https://www.youtube.com/watch?v=PaxNLUpQ-iU" target="_blank">ABOUT OUR CEO</a>
+        <br>
+        <a href="https://x.com/dreamybullxxx" target="_blank">Our Social Media</a>
+        
+        <p>Did you enjoy your meal, baby girl?</p>
+        
+        <label>
+            <input type="radio" name="user" value="yes"> Yes
+        </label>
+        <label>
+            <input type="radio" name="user" value="no"> No
+        </label>
+        
+        <form action="reservation.php" method="post">
+            <div class="elem-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="visitor_name" placeholder="John Doe" pattern="[A-Za-z\s]{3,20}" required>
+            </div>
+            
+            <div class="elem-group">
+                <label for="email">Your E-mail</label>
+                <input type="email" id="email" name="visitor_email" placeholder="john.doe@email.com" required>
+            </div>
+            
+            <div class="elem-group">
+                <label for="phone">Your Phone</label>
+                <input type="tel" id="phone" name="visitor_phone" placeholder="498-348-3872" pattern="(\d{3})-?\s?(\d{3})-?\s?(\d{4})" required>
+            </div>
+            
+            <hr>
+            
+            <div class="elem-group inlined">
+                <label for="adult">Adults</label>
+                <input type="number" id="adult" name="total_adults" placeholder="2" min="1" required>
+            </div>
+            
+            <div class="elem-group inlined">
+                <label for="child">Children</label>
+                <input type="number" id="child" name="total_children" placeholder="2" min="0" required>
+            </div>
+            
+            <div class="elem-group">
+                <label for="checkin-date">Check-in Date</label>
+                <input type="date" id="checkin-date" name="checkin" required>
+            </div>
+            
+            <div class="elem-group">
+                <label for="table-selection">Select Table Preference</label>
+                <select id="table-selection" name="table_preference" required>
+                    <option value="">Choose a table from the List</option>
+                    <option value="single">Single</option>
+                    <option value="two table">Two Table</option>
+                    <option value="sofa">Sofa</option>
+                </select>
+            </div>
+            
+            <hr>
+            
+            <div class="elem-group">
+                <label for="message">Anything Else?</label>
+                <textarea id="message" name="visitor_message" placeholder="Tell us anything else that might be important." required></textarea>
+            </div>
+            
+            <button type="submit">Book The Tables</button>
+        </form>
+    </body>
+</html>
